@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -A1v | sed -e 's/$/,/' -e 's/\/$/,/' | tr -d '\n' && echo
+ls -xamp
