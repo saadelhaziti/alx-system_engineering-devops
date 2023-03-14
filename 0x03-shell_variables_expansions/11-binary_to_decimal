@@ -1,2 +1,2 @@
 #!/bin/bash 
-echo "1337"
+echo $((2#BINARY))
