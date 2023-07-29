@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Display the content of the file /etc/passwd using while loop
+
+mylist=$(ls)
+
+for i in $mylist; do
+  echo "$i" | cut -d '-' -f2
+done

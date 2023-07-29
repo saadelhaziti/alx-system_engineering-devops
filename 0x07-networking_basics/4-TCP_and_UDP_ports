@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Script that checks if a host is on the network
+
+netstat -l

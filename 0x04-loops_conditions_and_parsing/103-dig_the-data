@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# Display the number of requests per IP address
+
+myfile="apache-access.log"
+awk -F' ' '{ print $1, $9}' $myfile | sort | uniq -c|sort -nr
