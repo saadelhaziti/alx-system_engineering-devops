@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# A script Nginx server to have a custom 404 page that contains the string Ceci n'est pas une page.
+sudo apt-get -y update
+sudo apt-get -y install nginx
+sudo service nginx start
+echo "Ceci n'est pas une page" | sudo tee /var/www/html/custom_404.html > /dev/null
+sudo sed -i "s/server_name _;/&\n\terror_page 404 \/custom_404.html;/" /etc/nginx/sites-enabled/default
+sudo service nginx restart
